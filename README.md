@@ -6,6 +6,9 @@ A C# WinForms application designed for inventory management. Although the codeba
 
 GestionStock allows small businesses to efficiently manage their inventory. The application provides a user-friendly interface for adding, updating, listing, and deactivating stock items, as well as organizing them by categories such as brands and item types.
 
+- **Demo link:**
+  https://www.youtube.com/watch?v=82wE2328eDs
+
 ## Main Features
 
 - **Stock Item Management:**  
