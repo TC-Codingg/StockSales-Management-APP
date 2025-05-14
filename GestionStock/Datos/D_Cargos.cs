@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using Microsoft.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GestionStock.Datos
+{
+    public class D_Cargos
+    {
+        public DataTable Listar_Cargos()
+        {
+            SqlDataReader resultado;
+            DataTable tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon = Conexion.crearInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("SP_LISTAR_CARGOS", SqlCon);
+                comando.CommandType = CommandType.StoredProcedure;
+
+                SqlCon.Open();
+
+                resultado = comando.ExecuteReader();
+                tabla.Load(resultado);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+        }
+
+    }
+}
