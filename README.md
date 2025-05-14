@@ -45,7 +45,10 @@ GestionStock allows small businesses to efficiently manage their inventory. The 
    Update the connection string in `App.config` to point to your SQL Server.  
    _Ensure you do not commit sensitive information like passwords to public repositories._
 
-3. **Running the Application:**  
+3. **Installation:**
+    Use the provided installer to deploy the application on client machines easily.
+
+4. **Running the Application:**  
    Open the solution in Visual Studio, build, and run.  
    Use the UI to manage your inventory.
 
