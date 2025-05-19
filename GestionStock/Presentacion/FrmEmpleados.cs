@@ -35,19 +35,38 @@ namespace GestionStock.Presentacion
         private void CargarEmpleados(string cBusqueda)
         {
             D_Empleados Datos = new D_Empleados();
+
             dgvLista.DataSource = Datos.Listar_Empleados(cBusqueda);
 
             FormatoListaEmpleados();
+
+            int count = 0;
+
+            foreach (DataGridViewRow row in dgvLista.Rows)
+            {
+                if (int.TryParse(row.Cells["Cantidad"].Value?.ToString(), out int cantidad)){
+                    if (cantidad < 3)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Red;
+                        count++;
+                    }
+                }
+            }
+            labelAdvertencia.Text = count.ToString();
         }
 
         private void FormatoListaEmpleados()
         {
+
             dgvLista.Columns[0].Width = 45;
             dgvLista.Columns[1].Width = 140;
             dgvLista.Columns[2].Width = 160;
             dgvLista.Columns[4].Width = 160;
             dgvLista.Columns[5].Width = 90;
             dgvLista.Columns[6].Width = 160;
+
+           // if (Empleado.Cantidad == "3") {
+            //}
         }
 
         private void CargarDepartamentos()

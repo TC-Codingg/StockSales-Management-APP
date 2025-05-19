@@ -133,9 +133,6 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="btnVentas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -225,6 +222,15 @@
         Gc7Bsy3X0XNUjYt24XlOJhkuwPz1H/ipFrnNl7bIu0WKU1tBrGmRD50ATmItwKy26TBWAbGmbXqROZZf
         ggRsk4elF2tlqNlJ7ShWCcHqqnhA614V1tRfFULCx8uu8UvI8c2dvPmyqzAR+TYWefwPEpqjh+y5Oeau
         NnkFBR00Ri6aOMldZBvF2AjVt6UOituon4kmkc963//L/CO0Wu9Y1Wm97RBWRwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DgAACw4BQL7hQQAAAKpJREFUOE9jGFrgqaQx12M5vQW4MEgeqhQ/eCytK/NYVq/yiZz+f1wYJA9SB9WC
+        HUAM0i9A0axk/P+pfwyYRhYHqcNpINhrWFz01NDx/7OnT8E0uhxIPVYvg8ICXTEI4zMMhEH6oEYgwKhh
+        1DPsib7d/2dnz4NpbPKkGUYAYzUMVzp7om///+mt22AaXQ5nOgMBquUAGIAYSIW8CQNgLwPDAhfG6bVB
+        ChgYAF2XpoRMjnvWAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

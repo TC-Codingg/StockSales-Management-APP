@@ -64,6 +64,9 @@
             btnEliminar = new Button();
             btnActualizar = new Button();
             btnNuevo = new Button();
+            panel4 = new Panel();
+            labelAdvertencia = new Label();
+            pictureBox3 = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -73,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvLista).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -472,11 +477,40 @@
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
             // 
+            // panel4
+            // 
+            panel4.Controls.Add(labelAdvertencia);
+            panel4.Controls.Add(pictureBox3);
+            panel4.Location = new Point(972, 433);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(192, 22);
+            panel4.TabIndex = 60;
+            // 
+            // labelAdvertencia
+            // 
+            labelAdvertencia.AutoSize = true;
+            labelAdvertencia.Font = new Font("Arial", 10F);
+            labelAdvertencia.Location = new Point(41, 3);
+            labelAdvertencia.Name = "labelAdvertencia";
+            labelAdvertencia.Size = new Size(0, 16);
+            labelAdvertencia.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(22, 2);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(19, 19);
+            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
             // FrmEmpleados
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1448, 768);
+            Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(txtPrecioLista);
             Controls.Add(label11);
@@ -519,6 +553,9 @@
             ((System.ComponentModel.ISupportInitialize)dgvLista).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -559,5 +596,8 @@
         private Button btnEliminar;
         private Button btnActualizar;
         private Button btnNuevo;
+        private Panel panel4;
+        private PictureBox pictureBox3;
+        private Label labelAdvertencia;
     }
 }
