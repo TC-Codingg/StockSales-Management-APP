@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             btnSalir = new Button();
@@ -219,7 +219,6 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.TextAlign = ContentAlignment.MiddleLeft;
             btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Visible = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // btnVender
@@ -239,7 +238,6 @@
             btnVender.Text = "Vender";
             btnVender.TextAlign = ContentAlignment.MiddleLeft;
             btnVender.UseVisualStyleBackColor = false;
-            btnVender.Visible = false;
             btnVender.Click += btnVender_Click;
             // 
             // panel3
@@ -283,14 +281,14 @@
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Código, Nombre, Marca, Tipo, Cantidad, Precio });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.Transparent;
-            dataGridViewCellStyle2.Font = new Font("Arial", 12F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.Transparent;
+            dataGridViewCellStyle1.Font = new Font("Arial", 12F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
             dataGridView1.Location = new Point(227, 154);
             dataGridView1.Name = "dataGridView1";

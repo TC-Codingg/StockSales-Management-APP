@@ -115,6 +115,42 @@ namespace GestionStock.Datos
             return respuesta;
         }
 
+        public string VenderProducto(string codigo, int cantidad)
+        {
+            string respuesta = "";
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon = Conexion.crearInstancia().CrearConexion();
+                SqlCommand comando = new SqlCommand("SP_VENDER_PRODUCTO", SqlCon);
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.Add("@cCodigo", SqlDbType.VarChar, 15).Value = codigo;
+                comando.Parameters.Add("@iCantidad", SqlDbType.Int).Value = cantidad;
+
+                SqlParameter resultado = new SqlParameter("@Resultado", SqlDbType.NVarChar, 100);
+                resultado.Direction = ParameterDirection.Output;
+                comando.Parameters.Add(resultado);
+
+                SqlCon.Open();
+                comando.ExecuteNonQuery();
+
+                respuesta = resultado.Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                respuesta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+
+            return respuesta;
+        }
+
+
         public string Desactivar_Empleado(int iCodigoEmpleado)
         {
             string respuesta = "";

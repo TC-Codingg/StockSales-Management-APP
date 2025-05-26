@@ -46,6 +46,36 @@ namespace GestionStock.Presentacion
             dataGridView1.Refresh();
         }
 
+        private void Vender()
+        {
+            D_Empleados Datos = new D_Empleados();
+            bool huboErrores = false;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string codigo = row.Cells["Código"]?.Value?.ToString();
+                string cantidadStr = row.Cells["Cantidad"]?.Value?.ToString();
+
+                if (!string.IsNullOrEmpty(codigo) && int.TryParse(cantidadStr, out int cantidad))
+                {
+                    string respuesta = Datos.VenderProducto(codigo, cantidad);
+
+                    if (respuesta != "OK")
+                    {
+                        MessageBox.Show($"Error con {codigo}: {respuesta}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        huboErrores = true;
+                    }
+                }
+            }
+
+            if (!huboErrores)
+            {
+                MessageBox.Show("Venta completada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
 
 
 
@@ -169,7 +199,6 @@ namespace GestionStock.Presentacion
             if (colNombre == "Código")
             {
 
-
                 string input = dataGridView1.Rows[e.RowIndex].Cells["Código"].Value?.ToString();
 
                 if (!string.IsNullOrEmpty(input))
@@ -203,7 +232,7 @@ namespace GestionStock.Presentacion
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-
+            Vender();
         }
     }
 }
