@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             btnSalir = new Button();
@@ -41,13 +41,13 @@
             label1 = new Label();
             dgvLista = new DataGridView();
             btnCancelar = new Button();
-            btnGuardar = new Button();
+            btnVender = new Button();
             panel3 = new Panel();
             toolStrip1 = new ToolStrip();
             btnVentas = new ToolStripButton();
             dataGridView1 = new DataGridView();
             Código = new DataGridViewComboBoxColumn();
-            Nombre = new DataGridViewComboBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
             Marca = new DataGridViewTextBoxColumn();
             Tipo = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
@@ -222,24 +222,25 @@
             btnCancelar.Visible = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // btnGuardar
+            // btnVender
             // 
-            btnGuardar.BackColor = Color.MidnightBlue;
-            btnGuardar.Cursor = Cursors.Hand;
-            btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGuardar.ForeColor = SystemColors.ButtonHighlight;
-            btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
-            btnGuardar.ImageAlign = ContentAlignment.MiddleRight;
-            btnGuardar.Location = new Point(484, 433);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Padding = new Padding(0, 0, 4, 0);
-            btnGuardar.Size = new Size(137, 44);
-            btnGuardar.TabIndex = 27;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.TextAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Visible = false;
+            btnVender.BackColor = Color.MidnightBlue;
+            btnVender.Cursor = Cursors.Hand;
+            btnVender.FlatStyle = FlatStyle.Flat;
+            btnVender.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVender.ForeColor = SystemColors.ButtonHighlight;
+            btnVender.Image = (Image)resources.GetObject("btnVender.Image");
+            btnVender.ImageAlign = ContentAlignment.MiddleRight;
+            btnVender.Location = new Point(484, 433);
+            btnVender.Name = "btnVender";
+            btnVender.Padding = new Padding(0, 0, 4, 0);
+            btnVender.Size = new Size(137, 44);
+            btnVender.TabIndex = 27;
+            btnVender.Text = "Vender";
+            btnVender.TextAlign = ContentAlignment.MiddleLeft;
+            btnVender.UseVisualStyleBackColor = false;
+            btnVender.Visible = false;
+            btnVender.Click += btnVender_Click;
             // 
             // panel3
             // 
@@ -276,21 +277,24 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Código, Nombre, Marca, Tipo, Cantidad, Precio });
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.Transparent;
-            dataGridViewCellStyle1.Font = new Font("Arial", 12F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Transparent;
+            dataGridViewCellStyle2.Font = new Font("Arial", 12F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
-            dataGridView1.Location = new Point(320, 154);
+            dataGridView1.Location = new Point(227, 154);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(643, 201);
+            dataGridView1.Size = new Size(836, 201);
             dataGridView1.TabIndex = 36;
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             dataGridView1.EditingControlShowing += dataGridView1_EditingControlShowing;
@@ -306,6 +310,9 @@
             // 
             Nombre.HeaderText = "Nombre";
             Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            Nombre.Resizable = DataGridViewTriState.True;
+            Nombre.SortMode = DataGridViewColumnSortMode.NotSortable;
             // 
             // Marca
             // 
@@ -340,7 +347,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel3);
             Controls.Add(btnCancelar);
-            Controls.Add(btnGuardar);
+            Controls.Add(btnVender);
             Controls.Add(dgvLista);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -373,7 +380,7 @@
         private Button btnSalir;
         private Button btnEliminar;
         private Button btnCancelar;
-        private Button btnGuardar;
+        private Button btnVender;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Panel panel3;
@@ -381,7 +388,7 @@
         private ToolStripButton btnVentas;
         private DataGridView dataGridView1;
         private DataGridViewComboBoxColumn Código;
-        private DataGridViewComboBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Marca;
         private DataGridViewTextBoxColumn Tipo;
         private DataGridViewTextBoxColumn Cantidad;
