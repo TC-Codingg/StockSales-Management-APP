@@ -16,7 +16,7 @@ namespace GestionStock.Entidades
         public decimal Salario_Empleado { get; set; }
         public int ID_Departamento { get; set; }
         public int ID_Cargo { get; set; }
-
-
+        public int stockMin { get; set; }
+        public int stockMax { get; set; }
     }
 }

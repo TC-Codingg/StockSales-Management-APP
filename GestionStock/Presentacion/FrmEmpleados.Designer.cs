@@ -67,6 +67,10 @@
             panel4 = new Panel();
             labelAdvertencia = new Label();
             pictureBox3 = new PictureBox();
+            stockMin = new NumericUpDown();
+            stockMax = new NumericUpDown();
+            label12 = new Label();
+            label13 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -78,6 +82,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)stockMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)stockMax).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -505,11 +511,51 @@
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
+            // stockMin
+            // 
+            stockMin.Enabled = false;
+            stockMin.Location = new Point(370, 202);
+            stockMin.Name = "stockMin";
+            stockMin.Size = new Size(62, 26);
+            stockMin.TabIndex = 61;
+            stockMin.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            // 
+            // stockMax
+            // 
+            stockMax.Enabled = false;
+            stockMax.Location = new Point(494, 203);
+            stockMax.Name = "stockMax";
+            stockMax.Size = new Size(62, 26);
+            stockMax.TabIndex = 62;
+            stockMax.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(330, 206);
+            label12.Name = "label12";
+            label12.Size = new Size(37, 18);
+            label12.TabIndex = 63;
+            label12.Text = "Min:";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(451, 206);
+            label13.Name = "label13";
+            label13.Size = new Size(41, 18);
+            label13.TabIndex = 64;
+            label13.Text = "Max:";
+            // 
             // FrmEmpleados
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1448, 768);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(stockMax);
+            Controls.Add(stockMin);
             Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(txtPrecioLista);
@@ -556,6 +602,8 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)stockMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)stockMax).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -599,5 +647,9 @@
         private Panel panel4;
         private PictureBox pictureBox3;
         private Label labelAdvertencia;
+        private NumericUpDown stockMin;
+        private NumericUpDown stockMax;
+        private Label label12;
+        private Label label13;
     }
 }

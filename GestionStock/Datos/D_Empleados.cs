@@ -60,6 +60,9 @@ namespace GestionStock.Datos
                 comando.Parameters.Add("@nSalario", SqlDbType.Money).Value = Empleado.Salario_Empleado;
                 comando.Parameters.Add("@nIdDepartamento", SqlDbType.Int).Value = Empleado.ID_Departamento;
                 comando.Parameters.Add("@nIdCargo", SqlDbType.Int).Value = Empleado.ID_Cargo;
+                comando.Parameters.Add("@stockMin", SqlDbType.Int).Value = Empleado.stockMin;
+                comando.Parameters.Add("@stockMax", SqlDbType.Int).Value = Empleado.stockMax;
+
 
                 SqlCon.Open();
 
@@ -97,6 +100,8 @@ namespace GestionStock.Datos
                 comando.Parameters.Add("@nSalario", SqlDbType.Money).Value = Empleado.Salario_Empleado;
                 comando.Parameters.Add("@nIdDepartamento", SqlDbType.Int).Value = Empleado.ID_Departamento;
                 comando.Parameters.Add("@nIdCargo", SqlDbType.Int).Value = Empleado.ID_Cargo;
+                comando.Parameters.Add("@stockMin", SqlDbType.Int).Value = Empleado.stockMin;
+                comando.Parameters.Add("@stockMax", SqlDbType.Int).Value = Empleado.stockMax;
 
                 SqlCon.Open();
 

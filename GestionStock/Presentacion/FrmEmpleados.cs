@@ -44,8 +44,8 @@ namespace GestionStock.Presentacion
 
             foreach (DataGridViewRow row in dgvLista.Rows)
             {
-                if (int.TryParse(row.Cells["Cantidad"].Value?.ToString(), out int cantidad)){
-                    if (cantidad < 3)
+                if (int.TryParse(row.Cells["Cantidad"].Value?.ToString(), out int cantidad) && int.TryParse(row.Cells["Min"].Value?.ToString(), out int min)){
+                    if (cantidad <= min)
                     {
                         row.DefaultCellStyle.BackColor = Color.Red;
                         count++;
@@ -57,16 +57,14 @@ namespace GestionStock.Presentacion
 
         private void FormatoListaEmpleados()
         {
-
             dgvLista.Columns[0].Width = 45;
-            dgvLista.Columns[1].Width = 140;
+            dgvLista.Columns[1].Width = 120;
             dgvLista.Columns[2].Width = 160;
             dgvLista.Columns[4].Width = 160;
             dgvLista.Columns[5].Width = 90;
             dgvLista.Columns[6].Width = 160;
-
-           // if (Empleado.Cantidad == "3") {
-            //}
+            dgvLista.Columns[8].Width = 50;
+            dgvLista.Columns[9].Width = 50;
         }
 
         private void CargarDepartamentos()
@@ -91,6 +89,8 @@ namespace GestionStock.Presentacion
         {
             txtNombre.Enabled = bEstado;
             txtDireccion.Enabled = bEstado;
+            stockMin.Enabled = bEstado;
+            stockMax.Enabled = bEstado;
             txtTelefono.Enabled = bEstado;
             txtSalario.Enabled = bEstado;
 
@@ -159,6 +159,8 @@ namespace GestionStock.Presentacion
             Empleado.Fecha_Nacimiento_Empleado = dtpNacimiento.Value;
             Empleado.ID_Departamento = Convert.ToInt32(cmbDepartamento.SelectedValue);
             Empleado.ID_Cargo = Convert.ToInt32(cmbCargo.SelectedValue);
+            Empleado.stockMin = Convert.ToInt32(stockMin.Value);
+            Empleado.stockMax = Convert.ToInt32(stockMax.Value);
 
             D_Empleados Datos = new D_Empleados();
             string respuesta = Datos.Guardar_Empleado(Empleado);
@@ -191,6 +193,8 @@ namespace GestionStock.Presentacion
             Empleado.Fecha_Nacimiento_Empleado = dtpNacimiento.Value;
             Empleado.ID_Departamento = Convert.ToInt32(cmbDepartamento.SelectedValue);
             Empleado.ID_Cargo = Convert.ToInt32(cmbCargo.SelectedValue);
+            Empleado.stockMin = Convert.ToInt32(stockMin.Value);
+            Empleado.stockMax = Convert.ToInt32(stockMax.Value);
 
             D_Empleados Datos = new D_Empleados();
             string respuesta = Datos.Actualizar_Empleado(Empleado);
