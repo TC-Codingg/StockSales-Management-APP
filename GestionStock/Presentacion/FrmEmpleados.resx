@@ -233,4 +233,28 @@
         ChgYAF2XpoRMjnvWAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnAddMarca.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAYBJREFUSEvdlT1OAlEURtmBFQZqxca/DeheJLocwRLcBpYWbkA73QNa2Gpigeck
+        34Dm4QwYLfQkXzLvu/c+Zu77ofX/mc1mm+gUXaKryGe9dtLWh+JuJnpDMkW3kc9izJxuylaDgmP0hF7Q
+        AO0lNEcPDdErMvc4oXpMTNE92o79JeT0kmvNUezlkGBbfBsLNmI3Ym5qHlEndglB+2lbtmKtDDV+iV8x
+        jvUZAu4WF20Qq4DYucqwgJhr4hzl7sI8Q7Ibq4DYjcqwgNi+E0A/1gJM2zPNcCnEa39AiLsOZZswPUC3
+        Gc7Bsy3X0XNUjYt24XlOJhkuwPz1H/ipFrnNl7bIu0WKU1tBrGmRD50ATmItwKy26TBWAbGmbXqROZZf
+        ggRsk4elF2tlqNlJ7ShWCcHqqnhA614V1tRfFULCx8uu8UvI8c2dvPmyqzAR+TYWefwPEpqjh+y5Oeau
+        NnkFBR00Ri6aOMldZBvF2AjVt6UOituon4kmkc963//L/CO0Wu9Y1Wm97RBWRwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAddRepuesto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAYBJREFUSEvdlT1OAlEURtmBFQZqxca/DeheJLocwRLcBpYWbkA73QNa2Gpigeck
+        34Dm4QwYLfQkXzLvu/c+Zu77ofX/mc1mm+gUXaKryGe9dtLWh+JuJnpDMkW3kc9izJxuylaDgmP0hF7Q
+        AO0lNEcPDdErMvc4oXpMTNE92o79JeT0kmvNUezlkGBbfBsLNmI3Ym5qHlEndglB+2lbtmKtDDV+iV8x
+        jvUZAu4WF20Qq4DYucqwgJhr4hzl7sI8Q7Ibq4DYjcqwgNi+E0A/1gJM2zPNcCnEa39AiLsOZZswPUC3
+        Gc7Bsy3X0XNUjYt24XlOJhkuwPz1H/ipFrnNl7bIu0WKU1tBrGmRD50ATmItwKy26TBWAbGmbXqROZZf
+        ggRsk4elF2tlqNlJ7ShWCcHqqnhA614V1tRfFULCx8uu8UvI8c2dvPmyqzAR+TYWefwPEpqjh+y5Oeau
+        NnkFBR00Ri6aOMldZBvF2AjVt6UOituon4kmkc963//L/CO0Wu9Y1Wm97RBWRwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

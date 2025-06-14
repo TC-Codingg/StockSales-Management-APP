@@ -79,21 +79,12 @@ namespace GestionStock.Presentacion
 
 
 
-        /* private void Limpiar()
+        private void Limpiar()
         {
-            txtNombre.Clear();
-            txtDireccion.Value = 0;
-            txtTelefono.Clear();
-            txtSalario.Clear();
-            txtBuscar.Clear();
-
-            cmbDepartamento.SelectedIndex = -1;
-            cmbCargo.SelectedIndex = -1;
-
-            dtpNacimiento.Value = DateTime.Now;
-
-            iCodigoEmpleado = 0;
-        }*/
+            FrmVentas Ventas = new FrmVentas();
+            this.Close();
+            Ventas.Show();
+        }
 
 
 
@@ -111,7 +102,7 @@ namespace GestionStock.Presentacion
         {
             bEstadoGuardar = true;
 
-            /*Limpiar();*/
+            Limpiar();
         }
 
 
@@ -233,6 +224,7 @@ namespace GestionStock.Presentacion
         private void btnVender_Click(object sender, EventArgs e)
         {
             Vender();
+            Limpiar();
         }
     }
 }

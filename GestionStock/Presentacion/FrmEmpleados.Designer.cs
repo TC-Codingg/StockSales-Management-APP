@@ -71,6 +71,8 @@
             stockMax = new NumericUpDown();
             label12 = new Label();
             label13 = new Label();
+            btnAddMarca = new Button();
+            btnAddRepuesto = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -547,11 +549,47 @@
             label13.TabIndex = 64;
             label13.Text = "Max:";
             // 
+            // btnAddMarca
+            // 
+            btnAddMarca.BackColor = Color.MidnightBlue;
+            btnAddMarca.Cursor = Cursors.Hand;
+            btnAddMarca.FlatStyle = FlatStyle.Flat;
+            btnAddMarca.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddMarca.ForeColor = SystemColors.ButtonHighlight;
+            btnAddMarca.Image = (Image)resources.GetObject("btnAddMarca.Image");
+            btnAddMarca.ImageAlign = ContentAlignment.MiddleRight;
+            btnAddMarca.Location = new Point(459, 303);
+            btnAddMarca.Name = "btnAddMarca";
+            btnAddMarca.Padding = new Padding(0, 0, 0, 1);
+            btnAddMarca.Size = new Size(33, 29);
+            btnAddMarca.TabIndex = 26;
+            btnAddMarca.TextAlign = ContentAlignment.MiddleLeft;
+            btnAddMarca.UseVisualStyleBackColor = false;
+            // 
+            // btnAddRepuesto
+            // 
+            btnAddRepuesto.BackColor = Color.MidnightBlue;
+            btnAddRepuesto.Cursor = Cursors.Hand;
+            btnAddRepuesto.FlatStyle = FlatStyle.Flat;
+            btnAddRepuesto.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddRepuesto.ForeColor = SystemColors.ButtonHighlight;
+            btnAddRepuesto.Image = (Image)resources.GetObject("btnAddRepuesto.Image");
+            btnAddRepuesto.ImageAlign = ContentAlignment.MiddleRight;
+            btnAddRepuesto.Location = new Point(1024, 301);
+            btnAddRepuesto.Name = "btnAddRepuesto";
+            btnAddRepuesto.Padding = new Padding(0, 0, 0, 1);
+            btnAddRepuesto.Size = new Size(33, 29);
+            btnAddRepuesto.TabIndex = 65;
+            btnAddRepuesto.TextAlign = ContentAlignment.MiddleLeft;
+            btnAddRepuesto.UseVisualStyleBackColor = false;
+            // 
             // FrmEmpleados
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1448, 768);
+            Controls.Add(btnAddRepuesto);
+            Controls.Add(btnAddMarca);
             Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(stockMax);
@@ -586,6 +624,7 @@
             Font = new Font("Arial", 12F);
             Margin = new Padding(4);
             Name = "FrmEmpleados";
+            Padding = new Padding(0, 0, 0, 1);
             StartPosition = FormStartPosition.CenterScreen;
             Load += FrmEmpleados_Load;
             panel2.ResumeLayout(false);
@@ -651,5 +690,7 @@
         private NumericUpDown stockMax;
         private Label label12;
         private Label label13;
+        private Button btnAddMarca;
+        private Button btnAddRepuesto;
     }
 }
